@@ -1,0 +1,74 @@
+/* 入场动画执行前 */
+.fade-enter {
+    opacity: 0;
+}
+/* 若元素添加 appear 属性 */
+.fade-appear{
+    opacity: 0;
+}
+/* 入场动画执行开始到第二个存在瞬间的过程 */
+.fade-enter-active, .fade-appear-active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+/* 入场动画执行完成后 */
+.fade-enter-done {
+    opacity: 1;
+}
+/* 出场动画 */
+.fade-exit {
+    opacity: 1;
+}
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.fade-exit-done {
+    opacity: 0;
+}
+
+
+
+.hello{
+    /* transition: all 1s ease-in; */
+    font-weight: bold;
+}
+.show{
+    /* opacity: 1; */
+    animation: show-item 1s ease-in forwards;
+}
+
+.hide{
+    /* opacity: 0; */
+    animation: hide-item 1s ease-in forwards;
+}
+
+@keyframes show-item {
+    0% {
+        opacity: 0;
+        color: blue;
+    }
+    50% {
+        opacity: .5;
+        color: green;
+    }
+    100% {
+        opacity: 1;
+        color: red;
+    }
+}
+
+@keyframes hide-item {
+    0% {
+        opacity: 1;
+        color: red;
+    }
+    50% {
+        opacity: .5;
+        color: green;
+    }
+    100% {
+        opacity: 0;
+        color: blue;
+    }
+}
